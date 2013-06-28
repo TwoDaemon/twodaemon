@@ -1,7 +1,9 @@
 """View handler. """
 
+from flask import render_template
+
 from twodaemon import app
 
 @app.route("/")
-def hello():
-    return "Hello World!"
+def home():
+    return render_template('home.html')
