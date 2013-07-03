@@ -1,10 +1,9 @@
 """View handler. """
 
 from flask import render_template, abort
-from flask import Markup
 
 from twodaemon import app
-from twodaemon import content
+from twodaemon.content import Content, ContentNotFoundError
 
 @app.route("/")
 def home():
@@ -12,8 +11,10 @@ def home():
 
 @app.route("/articles/<article_name>")
 def articles(article_name):
+    content = Content("article", article_name)
     try:
-        article_content = Markup(content.load_content("articles", article_name))
-    except content.ContentNotFoundError:
+        content.initialise()
+        article = content.build_page()
+    except ContentNotFoundError:
         abort(404)
-    return render_template('article.html', title=article_name, content=article_content)
+    return render_template('article.html', **article)
