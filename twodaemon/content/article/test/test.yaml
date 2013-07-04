@@ -1,2 +1,8 @@
 title: Test Article
-content_file: test.md
+pages:
+    1:
+        title: Test
+        file: test.md
+    2:
+        title: Test 2
+        file: test2.md

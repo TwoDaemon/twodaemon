@@ -22,15 +22,21 @@ class Content(object):
         self._load_content_directory()
         self._load_config()
 
-    def build_page(self):
-        content = markdown(self._load_page_file_content())
-        return self._build_page_dict(content)
+    def build_page(self, page_number):
+        if not page_number:
+            page_number = 1
+        page_data = self._build_page_dict(page_number)
+        page_data['content'] = self._load_page_content(page_number)
+        return page_data
 
-    def _build_page_dict(self, content):
-        return {
-            "title": self.config['title'],
-            "content": Markup(content),
-        }
+    def _build_page_dict(self, page_number):
+        try:
+            return {
+                "article_title": self.config['title'],
+                "page_title": self.config['pages'][page_number]['title'],
+            }
+        except KeyError as ke:
+            raise ContentPageNotFoundError("Definition for page %i not found in config for %s: %s" % (page_number, self.type, self.name))
 
     def _load_content_directory(self):
         self.location = "%s/%s/%s" % (Content.content_directory, self.type, self.name)
@@ -46,12 +52,18 @@ class Content(object):
         except yaml.YAMLError as ye:
             raise ContentConfigLoadError("Error reading config YAML: %s" % ye.message)
 
-    def _load_page_file_content(self):
+    def _load_page_content(self, page_number):
+        file_content = self._load_page_file_content(page_number)
+        return Markup(markdown(file_content))
+
+    def _load_page_file_content(self, page_number):
         try:
-            with open("%s/%s" % (self.location, self.config['content_file']), 'r') as f:
+            with open("%s/%s" % (self.location, self.config['pages'][page_number]['file']), 'r') as f:
                 return f.read()
         except IOError as ioe:
             raise ContentPageNotFoundError("Content file '%s' of type %s' not found." % (self.config['content_file'], self.type))
+        except KeyError as ke:
+            raise ContentPageNotFoundError("Definition for page %i not found in config for %s: %s" % (page_number, self.type, self.name))
 
 
 class ContentLoadError(Exception):
