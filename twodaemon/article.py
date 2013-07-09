@@ -39,6 +39,7 @@ class Article(object):
     def build_article_meta(self):
         return {
             "article_name": self.name,
+            "article_type": self.type,
             "article_url": url_for('article_single', article_name=self.name),
             "article_title": self.config['title'],
             "page_count": len(self.config['pages']),
@@ -51,7 +52,7 @@ class Article(object):
             "page_title": page_config['title'],
             "page_url": url_for('article_single', article_name=self.name, page_number=page_number),
             "page_number": page_number,
-            "content": self._load_page_content(page_config),
+            "page_content": self._load_page_content(page_config),
         })
         return page
 
