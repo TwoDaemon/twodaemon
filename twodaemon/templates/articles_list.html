@@ -1,0 +1,11 @@
+{% extends "_base.html" %}
+
+{% block page_title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <ul class="article-list">
+    {% for article in article_list %}
+        <li><a href="{{ article.article_url }}">{{ article.article_title }}</a></li>
+    {% endfor %}
+    </ul>
+{% endblock %}

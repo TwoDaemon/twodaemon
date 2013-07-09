@@ -1,12 +1,26 @@
 """Flask article loading module.  """
 
+from os import listdir
 from os.path import isdir
 
 from flask import Markup
+from flask import url_for
 from markdown import markdown
 import yaml
 
 from twodaemon import app
+
+
+def article_list(article_type):
+    """Collect data for all existing articles.  """
+    type_path = "%s/%s" % (Article.prefix_directory, article_type)
+    articles = []
+    for article_name in listdir(type_path):
+        article = Article(article_type, article_name)
+        article.initialise()
+        articles.append(article.build_article_meta())
+    return articles
+
 
 class Article(object):
     """Load page content for multi-page articles."""
@@ -22,15 +36,24 @@ class Article(object):
         self._check_article_directory()
         self._load_config()
 
+    def build_article_meta(self):
+        return {
+            "article_name": self.name,
+            "article_url": url_for('article_single', article_name=self.name),
+            "article_title": self.config['title'],
+            "page_count": len(self.config['pages']),
+        }
+
     def build_page(self, page_number):
         page_config = self._get_page_config(page_number)
-        return {
-            "article_title": self.config['title'],
+        page = self.build_article_meta()
+        page.update({
             "page_title": page_config['title'],
+            "page_url": url_for('article_single', article_name=self.name, page_number=page_number),
             "page_number": page_number,
-            "page_count": len(self.config['pages']),
             "content": self._load_page_content(page_config),
-        }
+        })
+        return page
 
     def _check_article_directory(self):
         self.location = "%s/%s/%s" % (Article.prefix_directory, self.type, self.name)
@@ -39,7 +62,7 @@ class Article(object):
 
     def _load_config(self):
         try:
-            with open("%s/%s.yaml" % (self.location, self.name), 'r') as f:
+            with open("%s/meta.yaml" % self.location, 'r') as f:
                 self.config = yaml.load(f)
         except IOError:
             raise ArticleConfigNotFoundError("Config file for article '%s' of type %s' not found." % (self.name, self.type))
