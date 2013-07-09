@@ -1,8 +1,4 @@
-Test Article
-============
-
-Subsection
-----------
+## Subsection
 
 * First Item
 * Second Item

@@ -1,8 +1,8 @@
 title: Test Article
 pages:
     1:
-        title: Test
+        title: Test Article 1
         file: test.md
     2:
-        title: Test 2
+        title: Test Article 2
         file: test2.md
