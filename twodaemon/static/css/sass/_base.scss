@@ -1,0 +1,37 @@
+/* Base CSS */
+
+body {
+    color: $primary-colour;
+    line-height: 1.5em;
+    font-size: 1em;
+    font-family: 'PT Serif', serif;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2, h3 {
+    font-size: 1.5em;
+}
+
+a {
+    color: $highlight-colour;
+    text-decoration: none;
+
+    &:hover {
+        background-color: $background-highlight-colour;
+    }
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    text-decoration: italic;
+}

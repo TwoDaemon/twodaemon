@@ -1,0 +1,20 @@
+/* Structure */
+
+.container {
+    width: 45em;
+    background-color: $background-colour;
+
+    border: {
+        width: 1px;
+        color: $background-highlight-colour;
+        style: solid;
+    }
+
+    margin: {
+        left: auto;
+        right: auto;
+        bottom: 1em;
+    }
+
+    padding: 1em;
+}
