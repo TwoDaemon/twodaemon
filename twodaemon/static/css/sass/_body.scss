@@ -1,5 +1,9 @@
 /* Main content */
 
+h1, h2, h3 {
+    font-family: 'Nixie One', cursive;
+}
+
 h1 {
     padding-bottom: 0.5em;
     margin-bottom: 0.5em;
@@ -14,9 +18,10 @@ h1 {
 h2, h3 {
     margin-bottom: 0.5em;
 
-    h3 {
-        color: $secondary-colour;
-    }
+}
+
+h3 {
+    color: $secondary-colour;
 }
 
 .content {}

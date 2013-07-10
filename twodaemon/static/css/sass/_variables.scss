@@ -1,9 +1,11 @@
 /* Variables */
 
-@import url(http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Nixie+One);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
 
-$background-colour: #fdf6e3;
-$background-highlight-colour: #eee8d5;
-$secondary-colour: #93a1a1;
-$primary-colour: #657b83;
-$highlight-colour: #268bd2;
+/* Solarized Dark Custom - lighter text */
+$background-colour: #394049;
+$background-highlight-colour: #464c56;
+$primary-colour: #DCE2E2;
+$secondary-colour: #968B83;
+$highlight-colour: #46ace3;
