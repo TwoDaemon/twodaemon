@@ -2,7 +2,10 @@
 
 {% block content %}
     <p>Hello, world!</p>
-    <p><a href="{{ url_for('article_list') }}">Articles</a></p>
+    <ul>
+        <li><a href="{{ url_for('article_list') }}">Articles</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+    </ul>
     <strong>Strong</strong>
     <em>Emphasis</em>
 {% endblock %}
