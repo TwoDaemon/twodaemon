@@ -3,9 +3,13 @@
 {% block content %}
     <p>Hello, world!</p>
     <ul>
+        <li>This is a list.</li>
         <li><a href="{{ url_for('article_list') }}">Articles</a></li>
         <li><a href="{{ url_for('about') }}">About</a></li>
     </ul>
-    <strong>Strong</strong>
-    <em>Emphasis</em>
+    <p>
+        This is not a list anymore.
+        <strong>Strong</strong>
+        <em>Emphasis</em>
+    </p>
 {% endblock %}

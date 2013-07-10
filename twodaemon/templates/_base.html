@@ -7,6 +7,12 @@
     <body>
         <nav class="container">
             {% block navigation %}
+            {% from '_macros.html' import nav %}
+            <ul>
+                <li>{{ nav('Home', 'home') }}</li>
+                <li>{{ nav('About', 'about') }}</li>
+                <li>{{ nav('Articles', 'article_list') }}</li>
+            </ul>
             {% endblock %}
         </nav>
         <section class="container">
