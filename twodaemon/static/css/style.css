@@ -224,6 +224,14 @@ em {
   padding: 1em; }
 
 /* Navigation */
+nav li {
+  display: inline-block; }
+  nav li .active {
+    font-weight: bold; }
+nav li + li:before {
+  content: " | ";
+  padding: 0 1em; }
+
 /* Main content */
 h1 {
   padding-bottom: 0.5em;
