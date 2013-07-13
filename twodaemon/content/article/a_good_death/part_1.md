@@ -58,16 +58,16 @@ reject the game before they achieve the mastery necessary to understand it. Unti
 amount of knowledge, the game seems equally incredibly unfair as players are unable to perceive the mistakes 
 they made which led to their defeat. 
 
-Some things you need to know for League of Legends (to pick an example at random) to have a snowball's chance: 
+Some things you need to know for *League of Legends* (to pick an example) to have a snowball's chance: 
 Every ability your champion has, every ability all of their champions have, the power of turrets, the value of 
 minions, which stats you need for your build, which items you need for those stats, which items you need to 
 make those items, laning, group fighting, solo fighting, jungling...
 
-Until you know all of these, LoL is easily perceived as unfair - and that's said to be one of the simpler 
-titles in the genre. It doesn't matter what the numbers say about the balance, it's the game in the player's 
-head which matters.  The knowledge barrier translates into perceived unfairness until that barrier is overcome. 
-This isn't to say that no games should have high knowledge costs - that's clearly ridiculous. The problem can 
-certainly be resolved, but that's not the topic of this article.
+Until you know all of these, *League of Legends* is easily perceived as unfair - and that's said to be one of 
+the simpler titles in the genre. It doesn't matter what the numbers say about the balance, it's the game in 
+the player's head which matters.  The knowledge barrier translates into perceived unfairness until that 
+barrier is overcome. This isn't to say that no games should have high knowledge costs - that's clearly 
+ridiculous. The problem can certainly be resolved, but that's not the topic of this article.
 
 ### Relative loss...
 
