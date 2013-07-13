@@ -246,13 +246,11 @@ h1, h2, h3, h4 {
 
 h1, h2 {
   padding-bottom: 0.5em;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
   border-bottom-width: 1px;
   border-bottom-color: #464c56;
   border-bottom-style: solid; }
 
-h3, h4 {
+h1, h2, h3, h4 {
   margin-bottom: 0.5em; }
 
 h4 {
@@ -272,6 +270,8 @@ h4 {
   padding-left: 1em;
   padding-top: 1em;
   padding-bottom: 1em; }
+  .site-title a {
+    color: #dce2e2; }
 
 /* Footer */
 footer {

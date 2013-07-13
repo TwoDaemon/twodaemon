@@ -6,10 +6,6 @@ h1, h2, h3, h4 {
 
 h1, h2 {
     padding-bottom: 0.5em;
-    margin: {
-        top: 0.5em;
-        bottom: 0.5em;
-    }
 
     border-bottom: {
         width: 1px;
@@ -18,9 +14,8 @@ h1, h2 {
     }
 }
 
-h3, h4 {
+h1, h2, h3, h4 {
     margin-bottom: 0.5em;
-
 }
 
 h4 {
@@ -46,5 +41,9 @@ h4 {
         left: 1em;
         top: 1em;
         bottom: 1em;
+    }
+
+    a {
+        color: $primary-colour;
     }
 }
