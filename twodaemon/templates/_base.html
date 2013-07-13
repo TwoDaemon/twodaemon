@@ -5,7 +5,7 @@
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
     </head>
     <body>
-        <h1 class="site-title container">twodaemon.co.uk</h1>
+        <h1 class="site-title">twodaemon.co.uk</h1>
         <nav class="container">
             {% block navigation %}
             {% from '_macros.html' import nav %}
@@ -29,7 +29,11 @@
         </section>
         <footer id="footer" class="container">
             {% block footer %}
-            <p>A simple footer</p>
+            <ul>
+                <li>Copyright Tom Kitchin</li>
+                <li>Twitter: <a href="http://twitter.com/TwoDaemon">@TwoDaemon</a></li>
+                <li>Email: tkitchin AT gmail DOT com</li>
+            </ul>
             {% endblock %}
         </footer>
     </body>

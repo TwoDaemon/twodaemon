@@ -1,1 +1,15 @@
 /* Footer */
+
+footer {
+    color: $secondary-colour;
+    
+    border-top: {
+        width: 1px;
+        color: $background-highlight-colour;
+        style: solid;
+    }
+
+    ul {
+        font-size: 0.8em;
+    }
+}

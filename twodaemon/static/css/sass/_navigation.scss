@@ -1,6 +1,8 @@
 /* Navigation */
 
 nav {
+    color: $background-highlight-colour;
+
     li {
         display: inline-block;
 
@@ -12,5 +14,11 @@ nav {
     li + li:before {
         content: " | ";
         padding: 0 1em;
+    }
+
+    border-bottom: {
+        width: 1px;
+        color: $background-highlight-colour;
+        style: solid;
     }
 }
