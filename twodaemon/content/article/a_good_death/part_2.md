@@ -38,7 +38,7 @@ Oh, some enemies will use feints or tricks, but there's nothing you cannot learn
 nothing undodgeable or unbeatable. And when you fight and you watch and you learn and then you dance 
 through a mad melee in a blur of perfect evasion and precision retaliation, well, then you earn the game's title.
 
-**SCREENSHOT - God Hand**
+![God Hand](/static/images/a_good_death/GodHand.png "I don't think you brought enough mooks.")
 
 Moving on from the simplest telegraphing of a strike to the more cautious environmental warnings, From 
 Software's *Dark Souls* shows us the way with a lift. One lift of many, with one significant difference and 
@@ -60,7 +60,8 @@ of sight and as they pull, stop, *pull*, stop, reverse. The room is even large e
 the player will not see the lift rising at some point.
 - For a third, the truly paranoid (i.e., anyone who got this far) can look up the lift shaft and see the spikes. 
 - Finally - but probably the first clue seen - the lift looks like this:
-**SCREENSHOT - Dark Souls lift, "My, but that *is* a lot of blood."**
+
+![Dark Souls - Doom Lift](/static/images/a_good_death/DarkSoulsLift.png "My, but that is a lot of blood.")
 
 Players still die to this but it is impossible not to be aware that they were *warned*, which means realising 
 that it was their fault and, therefore, that the lift was fair.
@@ -89,7 +90,7 @@ death, dying usually indicates either a critical planning flaw - in which case i
 forcing a change in plans or level restart regardless - or a minor mistake in implementation which needn't be too 
 heavily punished. 
 
-**SCREENSHOT - Gunpoint**
+![Gunpoint](/static/images/a_good_death/Gunpoint.png)
 
 Instead of scattering our autosaves, we can try predicting where they should be. Humans have a tendency to 
 checkpoint at breaks in game flow. This means cutscenes (before and after), bosses (also before and after) 
@@ -125,7 +126,7 @@ Actually using them as a checkpoint even involves your character sitting down at
 entire design is geared towards having the player checkpoint there and only there. They're fundamentally 
 just save points, but I've yet to see a better save point.
 
-**SCREENSHOT - Dark Souls Bonfire**
+![Dark Souls - Bonfire](/static/images/a_good_death/DarkSoulsBonfire.png "I feel safer already.")
 
 *Monster Hunter 3 Ultimate* is a game of planning, learning and attrition, the few hunters attempting to wear 
 out and bring down a seemingly unstoppable mass of muscle and bone.  My first proper hunt in Monster Hunter 
@@ -153,7 +154,7 @@ avoid but still, in the end, forgot. A **fair end**, without a doubt.
 A Barroth is, by the standards of the game, a very weak monster - but that battle is still one of my most fondly 
 remembered. 
 
-**SCREENSHOT - Monster Hunter, a Barroth**
+![Monster Hunter 3 Ultimate - Barroth](/static/images/a_good_death/MH3UBarroth.png)
 
 Death is frustrating when players lose more than they expect and feel that they have been cheated out of their 
 fair earnings, and this loss can be made **acceptable** by either understanding or defining what they expect to lose.
