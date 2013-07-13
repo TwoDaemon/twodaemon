@@ -40,7 +40,7 @@ counts for naught if the player never bothers to read signs.
 Everyone can probably think of a few examples here, games which fail you like a PE teacher in an English 
 class - without rhyme or reason. 
 
-![Giant worm eating a wizard](/static/images/a_good_death/WormEatWizardRargh.png "Silly me, of *course* there's a giant wizard-eating worm in the first room.")
+![The Immortal - Giant worm attack](/static/images/a_good_death/WormEatWizardRargh.png "Silly me, of *course* there's a giant wizard-eating worm in the first room.")
 
 Of course, there's always been games which do this entirely intentionally, starting with the old arcade 
 machines of yore in which any absurdity able to force even a skilled player to cough up a few more coins 
@@ -63,9 +63,6 @@ Every ability your champion has, every ability all of their champions have, the 
 minions, which stats you need for your build, which items you need for those stats, which items you need to 
 make those items, laning, group fighting, solo fighting, jungling...
 
-**SCREENSHOT**
-How informative.
-
 Until you know all of these, LoL is easily perceived as unfair - and that's said to be one of the simpler 
 titles in the genre. It doesn't matter what the numbers say about the balance, it's the game in the player's 
 head which matters.  The knowledge barrier translates into perceived unfairness until that barrier is overcome. 
@@ -82,8 +79,7 @@ harvested, etc. etc. between where they died and where they start up again. The 
 isn't quite that simple, though. It can't just be that the more they lose, the worse it is - if that were true, 
 no-one would ever play roguelikes at all. 
 
-**SCREENSHOT**
-Oh.
+![Dungeons of Dredmor - Monster Zoo](/static/images/a_good_death/MonsterZoo.png "Oh.")
 
 It's actually to do with checkpoints. 
 
@@ -109,9 +105,6 @@ are due to that disconnect between what we expect to lose (the minute we spent f
 lost (the minute fighting the boss, five minutes in the pre-battle cutscene and ten minutes clearing out his infinite 
 goddamn mooks why won't they just *die* already).
 
-**SCREENSHOT**
-She knows you're going to kill her eventually, the cutscene is just preemptive revenge.
-
 On the other side of the coin some games take the opposite path and favour save points, specific spots where the 
 developer will deign to save the player's game. Something of a JRPG entry in particular, the issue here tends to be when 
 these points are so far apart the player needs to unlock the obligatory airship to move between them. This highlights 
@@ -122,8 +115,7 @@ So those are the two negative aspects of death. Frustration at death comes from 
 more than we expect from it. Player frustration at any death in challenge-based gaming can be described using just these 
 two terms, the axes of frustration. 
 
-**SCREENSHOT**
-Not these axes.
+![Skyrim](/static/images/a_good_death/TheseAxes.png "Not these axes.")
 
 Now we understand why death is frustrating, in the next part we can solve these problems with the aspects of a good 
 death: **Fairness** and **acceptable loss**.
