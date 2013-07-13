@@ -1,21 +1,19 @@
 {% extends "_base.html" %}
 
 {% block content %}
-    <p>Hello, world!</p>
-    <ul>
-        <li>This is a list.</li>
-        <li><a href="{{ url_for('article_list') }}">Articles</a></li>
-        <li><a href="{{ url_for('about') }}">About</a></li>
-    </ul>
-    <p>
-        This is not a list anymore.
-        <strong>Strong</strong>
-        <em>Emphasis</em>
-    </p>
-    <h2>Header 2</h2>
-    <p>Some text.</p>
-    <h3>Header 3</h3>
-    <p>Some text.</p>
-    <h4>Header 4</h4>
-    <p>Some text.</p>
+    <div class="post">
+        <div class="post-meta">
+            2013-07-13 21:55
+        </div>
+        <h3 class="post-title">Starting at the end</h3>
+        <p>Hi there! Welcome to my burgeoning personal website. This is a first blog post of sorts, 
+        assuming I keep writing these.</p>
+        <p>Feel free to have a browse of what little I have here so far. It's game discussion and 
+        analysis, if you're wondering. You can find a little more information in the
+        <a href="{{ url_for('about') }}">about</a> page if you're interested.</p>
+        <p>Otherwise, hopefully you're here for my first article, 
+        <a href="{{ url_for('article_single', article_name='a_good_death') }}">A Good Death</a>, which is 
+        an analysis of the death of the player in challenge-based games and why it frustrates or 
+        doesn't.</p>
+    </div>
 {% endblock %}

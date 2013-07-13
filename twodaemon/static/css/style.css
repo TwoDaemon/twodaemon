@@ -271,6 +271,9 @@ h4 {
 .article-nav .right {
   float: right; }
 
+.post .post-meta {
+  color: #968b83; }
+
 .subtitle {
   margin-bottom: 1em;
   color: #968b83;
