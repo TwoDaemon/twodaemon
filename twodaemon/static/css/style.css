@@ -242,7 +242,8 @@ nav {
 
 /* Main content */
 h1, h2, h3, h4 {
-  font-family: "Nixie One", cursive; }
+  font-family: "Nixie One", cursive;
+  margin-bottom: 0.5em; }
 
 h1, h2 {
   padding-bottom: 0.5em;
@@ -250,8 +251,8 @@ h1, h2 {
   border-bottom-color: #464c56;
   border-bottom-style: solid; }
 
-h1, h2, h3, h4 {
-  margin-bottom: 0.5em; }
+h3, h4 {
+  padding-top: 0.5em; }
 
 h4 {
   color: #968b83; }
