@@ -42,7 +42,7 @@ class Article(object):
             "article_type": self.type,
             "article_url": url_for('article_single', article_name=self.name),
             "article_title": self.config['title'],
-            "article_subtitle": self.config['subtitle'],
+            "article_subtitle": self.config.get('subtitle'),
             "page_count": len(self.config['pages']),
         }
 
