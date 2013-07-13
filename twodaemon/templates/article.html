@@ -3,4 +3,11 @@
 {% block content %}
     {% if article_subtitle %}<div class="subtitle">{{ article_subtitle }}</div>{% endif %}
     {{ page_content }}
+    <div class="article-nav clearfix">
+        {% if prev_page_url %}
+        <div class="left"><a href="{{ prev_page_url }}">&lt; previous page</a></div>
+        {% endif %}
+        {% if next_page_url %}
+        <div class="right"><a href="{{ next_page_url }}">next page &gt;</a></div>
+        {% endif %}
 {% endblock %}

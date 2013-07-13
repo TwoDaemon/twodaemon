@@ -55,6 +55,12 @@ class Article(object):
             "page_number": page_number,
             "page_content": self._load_page_content(page_config),
         })
+        # Add previous and next pages.
+        if page_number > 1:
+            page['prev_page_url'] = url_for('article_single', article_name=self.name, page_number=page_number - 1)
+        if page_number < page['page_count']:
+            page['next_page_url'] = url_for('article_single', article_name=self.name, page_number=page_number + 1)
+
         return page
 
     def _check_article_directory(self):

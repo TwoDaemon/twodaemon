@@ -266,6 +266,11 @@ h4 {
   padding: 0.5em;
   margin-bottom: 0.5em; }
 
+.article-nav .left, .article-nav .right {
+  display: inline-block; }
+.article-nav .right {
+  float: right; }
+
 .subtitle {
   margin-bottom: 1em;
   color: #968b83;

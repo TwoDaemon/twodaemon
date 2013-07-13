@@ -37,6 +37,16 @@ h4 {
     }
 }
 
+.article-nav {
+    .left, .right {
+        display: inline-block;
+    }
+
+    .right {
+        float: right;
+    }
+}
+
 .subtitle {
     margin-bottom: 1em;
     color: $secondary-colour;
