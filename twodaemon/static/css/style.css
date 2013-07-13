@@ -259,6 +259,11 @@ h4 {
 #content ul, #content ol {
   padding-left: 1em;
   margin-bottom: 1em; }
+#content img {
+  background-color: #464c56;
+  color: #968b83;
+  padding: 0.5em;
+  margin-bottom: 0.5em; }
 
 .subtitle {
   margin-bottom: 1em;

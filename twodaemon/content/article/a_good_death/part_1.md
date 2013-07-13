@@ -40,8 +40,7 @@ counts for naught if the player never bothers to read signs.
 Everyone can probably think of a few examples here, games which fail you like a PE teacher in an English 
 class - without rhyme or reason. 
 
-**SCREENSHOT**
-Silly me, of *course* there's a giant wizard-eating worm in the first room.
+![Giant worm eating a wizard](/static/images/a_good_death/WormEatWizardRargh.png "Silly me, of *course* there's a giant wizard-eating worm in the first room.")
 
 Of course, there's always been games which do this entirely intentionally, starting with the old arcade 
 machines of yore in which any absurdity able to force even a skilled player to cough up a few more coins 

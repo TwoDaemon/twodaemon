@@ -27,6 +27,13 @@ h4 {
         padding-left: 1em;
         margin-bottom: 1em;
     }
+
+    img {
+        background-color: $background-highlight-colour;
+        color: $secondary-colour;
+        padding: 0.5em;
+        margin-bottom: 0.5em;
+    }
 }
 
 .subtitle {
