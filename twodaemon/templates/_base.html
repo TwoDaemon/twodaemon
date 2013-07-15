@@ -4,6 +4,10 @@
         <title>{% block head_title %}twodaemon.co.uk | {{ title }}{% endblock %}</title>
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% block js_top %}
+        {% from '_macros.html' import js_import %}
+        {{ js_import('google_analytics') }}
+        {% endblock %}
     </head>
     <body>
     <h1 class="site-title"><a href="{{ url_for('home') }}">twodaemon.co.uk</a></h1>
@@ -37,9 +41,7 @@
             </ul>
             {% endblock %}
         </footer>
-        {% block js %}
-        {% from '_macros.html' import js_import %}
-        {{ js_import('google_analytics') }}
+        {% block js_bottom %}
         {% endblock %}
     </body>
 </html>
