@@ -271,6 +271,13 @@ h4 {
 .article-nav .right {
   float: right; }
 
+.comments {
+  border-top-width: 1px;
+  border-top-color: #464c56;
+  border-top-style: solid;
+  margin-top: 1em;
+  padding-top: 1em; }
+
 .post .post-meta {
   color: #968b83; }
 

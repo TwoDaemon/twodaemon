@@ -10,4 +10,18 @@
         {% if next_page_url %}
         <div class="right"><a href="{{ next_page_url }}">next page &gt;</a></div>
         {% endif %}
+    </div>
+    <div class="comments" id="disqus_thread"></div>
+{% endblock %}
+
+{% block js %}
+{{ super() }}
+{% from '_macros.html' import js_import %}
+<script type="text/javascript">
+    /* Disqus local variables */
+    var disqus_identifier = 'article/{{ article_name }}';
+    var disqus_title = '{{ article_title }}';
+    var disqus_url = '{{ article_absolute_url }}';
+</script>
+{{ js_import('disqus') }}
 {% endblock %}

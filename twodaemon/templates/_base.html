@@ -36,5 +36,9 @@
             </ul>
             {% endblock %}
         </footer>
+        {% block js %}
+        {% from '_macros.html' import js_import %}
+        {{ js_import('google_analytics') }}
+        {% endblock %}
     </body>
 </html>

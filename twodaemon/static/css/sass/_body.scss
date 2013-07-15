@@ -47,6 +47,16 @@ h4 {
     }
 }
 
+.comments {
+    border-top: {
+        width: 1px;
+        color: $background-highlight-colour;
+        style: solid;
+    }
+    margin-top: 1em;
+    padding-top: 1em;
+}
+
 .post {
     .post-meta {
         color: $secondary-colour;
