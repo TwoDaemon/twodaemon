@@ -3,7 +3,8 @@
 {% block content %}
     <ul class="article-list">
     {% for article in article_list %}
-        <li><a href="{{ article.article_url }}">{{ article.article_title }}</a></li>
+    <li><a href="{{ article.article_url }}">{{ article.article_title }}</a>
+        {%- if article.article_subtitle %} - {{ article.article_subtitle }}{% endif %}</li>
     {% endfor %}
     </ul>
 {% endblock %}
