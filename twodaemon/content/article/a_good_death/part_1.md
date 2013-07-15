@@ -31,7 +31,7 @@ untimely demise. It is easily recognised by the phrase "Oh, come *on*, that was 
 Unfair is the floor dropping away to spikes without warning.
 Unfair is the boss using his screen-filling ultimate attack five times in a row out of sheer randomness.
 Unfair is enemies spawning behind you in an area you'd thoroughly cleared.
-Unfair is *really fucking annoying*.
+Unfair is *really annoying*.
 
 The 'perceived' part is equally key, although less obviously so. Players don't play the game as it exists 
 in the development notes, they play the game in their heads. The big signpost marked "Warning: Spikes" 
@@ -90,23 +90,15 @@ puzzle, defeat a boss, open a door, every time we do anything we think is import
 
 Then we die, and instinctively we expect to find ourselves back at our checkpoint, back at the start of "this bit". 
 Except we're not, because the last autosave was before that long cutscene, because the last time we saved was at 
-that village six hours ago, because we forgot to save since, shit, *how* far back? Jesus. Never mind then. 
+that village six hours ago, because we forgot to save since *how* far back? Jesus. Never mind then. 
 
-Relative loss is the disparity between what we subconsciously expect to lose and what we actually lose. It is not 
-fair. It is not, necessarily, the developer's fault. It might even be the player's fault. The effect is still the 
-same, though. 
-
-The classic example involves actual checkpoints, that beloved solution to reloading frustration.  Don't worry about 
-loss, just put the player back on the road from ten minutes ago and on they go, happy as a lamb.  Except when those 
-ten minutes were an unskippable cutscene, or a sequence of dull fights leading up the the boss which killed you, or 
-*before* a tough boss you just defeated. Almost like the situations most likely to annoy if you have to replay them 
-are also the kind of critical events which tend to trigger a mental checkpoint. All of these common gaming frustrations 
+All of these common gaming frustrations 
 are due to that disconnect between what we expect to lose (the minute we spent fighting the boss) and what we actually 
-lost (the minute fighting the boss, five minutes in the pre-battle cutscene and ten minutes clearing out his infinite 
-goddamn mooks why won't they just *die* already).
+lost (the minute fighting the boss, five minutes in the pre-battle cutscene and ten minutes clearing out his easily-beaten 
+mooks). That cost is much more than just the fifteen minutes.
 
-On the other side of the coin some games take the opposite path and favour save points, specific spots where the 
-developer will deign to save the player's game. Something of a JRPG entry in particular, the issue here tends to be when 
+Although autosaves are the most common cause of complaint here, it's worth mentioning fixed save points separately. 
+Something of a JRPG entry in particular, the issue with these restricted save areas tends to be when 
 these points are so far apart the player needs to unlock the obligatory airship to move between them. This highlights 
 a notable point - the player can be actively, consciously aware of where they'll reload and still be checkpointing in 
 their heads, still actively hurt when they lose more than they "should". 

@@ -1,7 +1,7 @@
 *A good death is one which costs the player no more than they expected and which the player believes to 
 be their fault.*
 
-Welcome to the second part of A Good Death, an essay on the topic of death and failure in challenge-based 
+Welcome to the second part of A Good Death, some thoughts on the topic of death and failure in challenge-based 
 gaming. In part one we defined a good death as seen above, then discussed the two axes of frustration: 
 perceived unfairness and relative loss. Now, in part two, we will discuss implementing the solutions to 
 the axes: **fairness** and **acceptable loss**.
