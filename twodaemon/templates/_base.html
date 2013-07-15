@@ -4,9 +4,19 @@
         <title>{% block head_title %}twodaemon.co.uk | {{ title }}{% endblock %}</title>
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        {% block js_top %}
-        {% from '_macros.html' import js_import %}
-        {{ js_import('google_analytics') }}
+        {% block google_analytics %}
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-42470605-1']);
+            _gaq.push(['_setDomainName', 'twodaemon.co.uk']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
         {% endblock %}
     </head>
     <body>
