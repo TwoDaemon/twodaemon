@@ -1,0 +1,38 @@
+{% extends "_base.html" %}
+
+{% block content %}
+    <div class="post">
+        <h3 class="post-title">Journey</h3>
+        <div class="post-meta">
+            2013-07-16 01:16
+        </div>
+        <p>So I finally borrowed a PS3 and took the opportunity to try out Journey. I'm aware I'm a touch late 
+        to this particular party, but I suspect Journey is timeless.</p>
+        <p>Journey is like...</p>
+        <p>No.</p>
+        <p>Journey is making a trusted friend, through thick and thin, with all the joy and pain that implies.</p>
+        <p>I can think of no higher praise, and I would recommend it to anyone and everyone.</p>
+    </div>
+    <div class="post">
+        <h3 class="post-title">Starting at the end</h3>
+        <div class="post-meta">
+            2013-07-15 19:38
+        </div>
+        <p>My first article is up and readable, containing some thoughts on the topic of the death 
+        of the player in challenge-based games and why it frustrates or doesn't.</p>
+        <p>The title is <a href="{{ url_for('article_single', article_name='a_good_death') }}">A Good Death</a>
+         - please give it a read and - if you feel so inclined - contact me in the comments underneath or
+        via the various contact methods in the footer.</p>
+    </div>
+    <div class="post">
+        <h3 class="post-title">Introduction</h3>
+        <div class="post-meta">
+            2013-07-13 21:55
+        </div>
+        <p>Hi there! Welcome to my burgeoning personal website. This is a first blog post of sorts, 
+        assuming I keep writing these.</p>
+        <p>Feel free to have a browse of what little I have here so far. It's game discussion and 
+        analysis, if you're wondering. You can find a little more information in the
+        <a href="{{ url_for('about') }}">about</a> page if you're interested.</p>
+    </div>
+{% endblock %}

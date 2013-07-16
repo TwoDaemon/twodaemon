@@ -13,6 +13,10 @@ def home():
 def about():
     return render_template('about.html', title="About")
 
+@app.route("/blog")
+def blog():
+    return render_template('blog.html', title="Blog")
+
 @app.route("/articles/")
 def article_list():
     articles = article.article_list("article")

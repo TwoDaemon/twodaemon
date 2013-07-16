@@ -58,8 +58,20 @@ h4 {
 }
 
 .post {
+    h3 {
+        margin-bottom: 0;
+    }
+
     .post-meta {
         color: $secondary-colour;
+    }
+
+    & + .post {
+        border-top: {
+            width: 1px;
+            color: $background-highlight-colour;
+            style: solid;
+        }
     }
 }
 
