@@ -128,9 +128,12 @@ just save points, but I've yet to see a better save point.
 
 ![Dark Souls - Bonfire](/static/images/a_good_death/DarkSoulsBonfire.png "I feel safer already.")
 
-*Monster Hunter 3 Ultimate* is a game of planning, learning and attrition, the few hunters attempting to wear 
-out and bring down a seemingly unstoppable mass of muscle and bone.  My first proper hunt in Monster Hunter 
-was a Barroth - an oversized T-rex with a club tail and a tough bony spade-like ridge for a forehead. 
+### Personally...
+
+...I like to play *Monster Hunter 3 Ultimate*. Monster Hunter is a game of planning, learning and attrition, 
+a few hunters attempting to wear out and bring down a seemingly unstoppable mass of muscle and bone. 
+My first proper hunt in Monster Hunter was a Barroth - an oversized T-rex with a club tail and a tough 
+bony spade-like ridge for a forehead. 
 
 The battle takes forty full minutes of my constant attention. I have no potions, precious little health, my 
 stamina failing me. He limps, much of his strength lost, many attacks ending in lumbering falls.  Earlier he 
