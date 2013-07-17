@@ -1,3 +1,5 @@
 Flask
+Flask-Cache
 markdown
 pyyaml
+pylibmc
