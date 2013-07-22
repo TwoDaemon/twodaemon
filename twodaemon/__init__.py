@@ -5,9 +5,7 @@ app = Flask('twodaemon')
 
 app.config.from_object('twodaemon.settings')
 
-# Disable caching in debug mode.
-if app.debug:
-    app.config['CACHE_TYPE'] = 'null';
 cache = Cache(app)
+#cache = Cache(app, config={'CACHE_TYPE': 'null'})
 
 import twodaemon.views
