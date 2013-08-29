@@ -18,7 +18,8 @@ def article_list(article_type):
     for article_name in listdir(type_path):
         article = Article(article_type, article_name)
         article.initialise()
-        articles.append(article.build_article_meta())
+        if not article.config.get('hidden'):
+            articles.append(article.build_article_meta())
     return articles
 
 
