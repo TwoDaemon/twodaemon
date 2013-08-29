@@ -32,3 +32,7 @@ def article_single(article_name, page_number=1):
     except article.ArticleNotFoundError:
         abort(404)
     return render_template('article.html', title=page['page_title'], **page)
+
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('404.html', title="404 Not Found"), 404
