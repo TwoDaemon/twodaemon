@@ -3,7 +3,7 @@
 from flask import render_template, abort
 
 from twodaemon import app, cache
-from twodaemon import article, blog
+from twodaemon import article
 
 @app.route("/")
 @cache.cached(timeout=app.config['CACHE_TIMEOUT'])
@@ -14,20 +14,6 @@ def home():
 @cache.cached(timeout=app.config['CACHE_TIMEOUT'])
 def about():
     return render_template('about.html', title="About")
-
-@app.route("/blog")
-@cache.cached(timeout=app.config['CACHE_TIMEOUT'])
-def blog_list():
-    return render_template('blog.html', title="Blog")
-
-@app.route("/blog/<post_name>")
-@cache.cached(timeout=app.config['CACHE_TIMEOUT'])
-def blog_single(post_name):
-    try:
-        post = blog.build_post(post_name)
-    except blog.PostNotFoundError:
-        abort(404)
-    return render_template('blog_single.html', title=post['post_title'], **post)
 
 @app.route("/articles/")
 @cache.cached(timeout=app.config['CACHE_TIMEOUT'])
