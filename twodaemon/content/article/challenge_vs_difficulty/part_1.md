@@ -2,7 +2,9 @@
 
 Well, that was a lie. It's basically goddamn nails. I should say: *Dark Souls* is not *only* a hard game.
 
-The difference can be described in terms of **challenge** and **difficulty**, very different things.
+It is, far more importantly, a challenging game. 
+
+Allow me to explain the difference.
 
 **Challenge is fought with skill, difficulty is fought with persistence.**
 
@@ -37,11 +39,51 @@ harder for the simplest possible definition of 'hard'.
 
 Earlier I said it is "fought with persistance". If he has twice as many hitpoints, just fight for twice as long. Problem solved.
 
-Obviously it's not quite that simple, but we'll get back to that.
+It's not really quite that simple, but we'll get back to that.
 
 ---
 Image here?
 ---
 
-**Challenge** in games is something laced throughout the entire design. It is a thing of craft, custom-made, 
-subjective. 
+**Challenge** in games is something which has to be laced throughout the entire design. It is a thing of craft, 
+custom-made, and every player meets it differently. 
+
+A situation is challenging when it tests the very limit of your skills and demands that you improve to meet it. 
+The more it demands of you, the more challenging it is - that is, until it goes too far and becomes entirely beyond you, 
+flatly impossible. 
+
+Challenge can come in many forms. *Portal* is challenging, for it constantly demands you demonstrate new and greater 
+ways of thinking with portals. *The Walking Dead* is challenging, as it forces you to make ever more difficult decisions 
+against ever more unreasonable situations. 
+
+And, of course, *Dark Souls* is challenging, because every foe, every boss, every bonfire is won through demonstrating 
+ever-increasing mastery in fields from knowledge of your enemies and awareness of traps to the more obvious mastery of 
+sword and shield.
+
+In all of these cases challenge is found in improvement. Once the skill being challenged is fully mastered the challenge 
+no longer represents a problem, it is no longer challenging. 
+
+---
+Image here?
+---
+
+The first time I played Dark Souls I stumbled early on into the depths of New Londo, an area not actually recommended for 
+a picnic until much later in the game. There I challenged the Darkwraiths, black-armoured knights all. 
+
+This wasn't my finest decision. Eventually, dismembered a hundred different ways, I retreated and found another path. Hours 
+later I returned - this was my next destination, and this time I couldn't run away.
+
+I squared up to the first Darkwraith, prepared myself for a terrible battle, raised my weapon, roared my battle cry.
+
+I very nearly took the first blow from sheer confusion. It seemed so *slow*, its path so obvious, every attack a 
+ridiculous pantomime of true combat. Dodge, block, dodge, stab *stab* and done. 
+
+Effortless. 
+
+Of course, in ten hours my skills had been advanced elsewhere until, far from the previous threat level, now a Darkwraith's 
+skills were well within my mastery. No challenge remained. Had I not first visited them early I would never even have known 
+them as 'strong'. 
+
+That's the thing about challenge - it only matters if it nears your skill. 
+
+5 + 2 + 3 is more difficult than 5 + 5, but hardly more challenging.
