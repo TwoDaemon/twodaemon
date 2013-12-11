@@ -40,7 +40,7 @@
                 {% block content %}
                 {% endblock %}
             </article>
-        <footer id="footer">
+        <footer>
             {% block footer %}
             <ul>
                 <li>Copyright Tom Kitchin</li>
@@ -50,6 +50,8 @@
             {% endblock %}
         </footer>
         {% block js_bottom %}
+            {% from '_macros.html' import js_import %}
+            {{ js_import('smooth-scroll') }}
         {% endblock %}
     </body>
 </html>
