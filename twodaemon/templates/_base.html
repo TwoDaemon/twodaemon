@@ -20,23 +20,27 @@
         {% endblock %}
     </head>
     <body>
-    <h1 class="site-title"><a href="{{ url_for('home') }}">twodaemon.co.uk</a></h1>
-        <nav class="container">
-            {% block navigation %}
-            {% endblock %}
-        </nav>
-        <section class="container">
-            <div id="title">
+    <h1><a href="{{ url_for('home') }}">twodaemon.co.uk</a></h1>
+        {% block navigation %}
+            <nav>
+                {% from '_macros.html' import nav %}
+                <ul>
+                    <li>{{ nav('Introduction', 'home', 'introduction') }}</li>
+                    <li>{{ nav('Articles', 'home', 'articles') }}</li>
+                    <li>{{ nav('Speaking', 'home', 'speaking') }}</li>
+                    <li>{{ nav('Contact', 'home', 'contact') }}</li>
+                </ul>
+            </nav>
+        {% endblock %}
+            <article>
                 {% block page_title %}
                 <h2>{{ title }}</h2>
                 {% endblock %}
-            </div>
-            <div id="content">
+
                 {% block content %}
                 {% endblock %}
-            </div>
-        </section>
-        <footer id="footer" class="container">
+            </article>
+        <footer id="footer">
             {% block footer %}
             <ul>
                 <li>Copyright Tom Kitchin</li>

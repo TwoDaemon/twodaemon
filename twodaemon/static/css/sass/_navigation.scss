@@ -1,6 +1,14 @@
 /* Navigation */
 
 nav {
+    padding: 1em;
+
+    border-bottom: {
+        width: 1px;
+        color: $background-highlight-colour;
+        style: solid;
+    }
+
     color: $background-highlight-colour;
 
     li {
@@ -14,11 +22,5 @@ nav {
     li + li:before {
         content: " | ";
         padding: 0 1em;
-    }
-
-    border-bottom: {
-        width: 1px;
-        color: $background-highlight-colour;
-        style: solid;
     }
 }

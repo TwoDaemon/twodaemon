@@ -1,13 +1,15 @@
 /* Footer */
 
 footer {
-    color: $secondary-colour;
+    padding: 1em;
 
-    border-top: {
+    border-bottom: {
         width: 1px;
         color: $background-highlight-colour;
         style: solid;
     }
+
+    color: $secondary-colour;
 
     ul {
         font-size: 0.8em;

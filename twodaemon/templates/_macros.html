@@ -1,13 +1,5 @@
-{% macro nav(name, endpoint) -%}
-    {% if endpoint == request.endpoint %}
-        <a class="active" href="{{ url_for(endpoint) }}">{{ name }}</a>
-    {% else %}
-        <a href="{{ url_for(endpoint) }}">{{ name }}</a>
-    {% endif %}
-{%- endmacro %}
-
-{% macro localnav(name, id) -%}
-    <a href="#{{ id }}">{{ name }}</a>
+{% macro nav(name, endpoint, id='') -%}
+    <a href="{{ url_for(endpoint, _anchor=id) }}">{{ name }}</a>
 {%- endmacro %}
 
 {% macro js_import(js_name) -%}

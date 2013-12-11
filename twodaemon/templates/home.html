@@ -1,34 +1,26 @@
 {% extends "_base.html" %}
 
-{% block navigation %}
-    {% from '_macros.html' import localnav %}
-    <ul>
-        <li>{{ localnav('Introduction', 'introduction') }}</li>
-        <li>{{ localnav('Articles', 'articles') }}</li>
-        <li>{{ localnav('Speaking', 'speaking') }}</li>
-        <li>{{ localnav('Contact', 'contact') }}</li>
-    </ul>
-{% endblock %}
+{% block head_title %}twodaemon.co.uk{% endblock %}
 
 {% block page_title %}
 {% endblock %}
 
 {% block content %}
-    {% from '_macros.html' import localnav %}
-    <section id="introduction" class="container">
+    {% from '_macros.html' import nav %}
+    <section id="introduction">
         <h2>Introduction</h3>
-        <p>Firstly, feel free to skip ahead for {{ localnav('games discussion and analysis', 'articles') }} 
-        and information on {{ localnav("talks I've delivered", 'speaking') }}.</p>
+        <p>Firstly, feel free to skip ahead for {{ nav('games discussion and analysis', 'home', id='articles') }} 
+        and information on {{ nav("talks I've delivered", 'home', id='speaking') }}.</p>
         <p>If you care who I am - hi there. I'm Tom, otherwise most easily found online as TwoDaemon.</p>
         <p>I'm interested in game design, game analysis and discussion and in public speaking on those topics. 
         If you're looking for someone with public speaking skills and a broad awareness of game design and the 
-        gaming industry, please check out my {{ localnav('previous talks', 'speaking') }} and definitely
-        {{ localnav('contact me', 'contact') }}.</p>
+        gaming industry, please check out my {{ nav('previous talks', 'home', id='speaking') }} and definitely
+        {{ nav('contact me', 'home', id='contact') }}.</p>
         <p>I can be reached via my email at <strong>tkitchin AT gmail DOT com</strong> or on Twitter at 
         <strong><a href="http://twitter.com/TwoDaemon">@TwoDaemon</a></strong>.</p>
     </section>
 
-    <section id="articles" class="container">
+    <section id="articles">
         <h2>Articles</h3>
         <p>Articles on a selection of gaming-related topics, generally about design elements and such.</p>
         <p>Style tends towards a sort of semi-informal topic analysis, although there will 
@@ -41,7 +33,7 @@
         </ul>
     </section>
 
-    <section id="speaking" class="container">
+    <section id="speaking">
         <h2>Speaking</h2>
         <p>I've done some speaking at events on topics of game design and am actively seeking more opportunities to do so.</p>
         <p>These are some events I've been involved in:</p>
@@ -71,7 +63,7 @@
         </ul>
     </section>
 
-    <section id="contact" class="container">
+    <section id="contact">
         <h2>Contact Information</h2>
         <ul>
             <li>Tom Kitchin</li>
