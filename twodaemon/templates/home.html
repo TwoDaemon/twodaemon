@@ -1,11 +1,83 @@
 {% extends "_base.html" %}
 
+{% block navigation %}
+    {% from '_macros.html' import localnav %}
+    <ul>
+        <li>{{ localnav('Introduction', 'introduction') }}</li>
+        <li>{{ localnav('Articles', 'articles') }}</li>
+        <li>{{ localnav('Speaking', 'speaking') }}</li>
+        <li>{{ localnav('Contact', 'contact') }}</li>
+    </ul>
+{% endblock %}
+
+{% block page_title %}
+{% endblock %}
+
 {% block content %}
-    <p>Hi there, and welcome to my personal website.</p>
-    <p>Feel free to have a browse of what little I have here so far.  I'll be 
-    writing about game discussion and analysis, if you're wondering.</p>
-    <p>You can find a more information about me and the site in the 
-    <a href="{{ url_for('about') }}">about</a> page or you can go to the list 
-    of full-length <a href="{{ url_for('article_list') }}">articles</a> as 
-    takes your interest.</p>
+    {% from '_macros.html' import localnav %}
+    <section id="introduction" class="container">
+        <h2>Introduction</h3>
+        <p>Firstly, feel free to skip ahead for {{ localnav('games discussion and analysis', 'articles') }} 
+        and information on {{ localnav("talks I've delivered", 'speaking') }}.</p>
+        <p>If you care who I am - hi there. I'm Tom, otherwise most easily found online as TwoDaemon.</p>
+        <p>I'm interested in game design, game analysis and discussion and in public speaking on those topics. 
+        If you're looking for someone with public speaking skills and a broad awareness of game design and the 
+        gaming industry, please check out my {{ localnav('previous talks', 'speaking') }} and definitely
+        {{ localnav('contact me', 'contact') }}.</p>
+        <p>I can be reached via my email at <strong>tkitchin AT gmail DOT com</strong> or on Twitter at 
+        <strong><a href="http://twitter.com/TwoDaemon">@TwoDaemon</a></strong>.</p>
+    </section>
+
+    <section id="articles" class="container">
+        <h2>Articles</h3>
+        <p>Articles on a selection of gaming-related topics, generally about design elements and such.</p>
+        <p>Style tends towards a sort of semi-informal topic analysis, although there will 
+        probably be a few less focused entries eventually in lieu of having a blog to put them on.</p>
+        <ul class="article-list">
+        {% for article in articles %}
+        <li><a href="{{ article.url }}">{{ article.title }}</a>
+            {%- if article.subtitle %} - {{ article.subtitle }}{% endif %}</li>
+        {% endfor %}
+        </ul>
+    </section>
+
+    <section id="speaking" class="container">
+        <h2>Speaking</h2>
+        <p>I've done some speaking at events on topics of game design and am actively seeking more opportunities to do so.</p>
+        <p>These are some events I've been involved in:</p>
+        <ul>
+            <li>
+                <strong>A Good Death</strong>, an analysis of player failure as a part of game design. 
+                Delivered at <a href="http://gamecamp.org.uk">GameCamp 2013</a>, 18/05/2013.
+            </li>
+            <li>
+                <strong>Chasing Butterflies</strong>, a microtalk on the design challenges of escort quests in games.
+                Delivered at <a href="https://nineworlds.co.uk/">Nine Worlds</a>, 10/08/2013.
+                Followed the '20-20' constraint, twenty slides with the slides transitioning automatically every twenty seconds.
+            </li>
+            <li>
+                <strong>Difficulty In Games: a barrier to art?</strong>, a panel discussing the issue of challenge in games 
+                blocking some players from the full experience. 
+                Panel at <a href="https://nineworlds.co.uk/">Nine Worlds</a>, 11/08/2013.
+                Other panellists: <a href="http://canvasandpaints.blogspot.co.uk/">Shirley Procter</a>, 
+                <a href="http://www.failnaut.com/">C.Y. Reid</a>, 
+                <a href="http://www.alanzucconi.com/">Alan Zucconi</a>.
+            </li>
+            <li>
+                <strong>Theme and mechanics in a story-driven genre</strong>, a talk on the use of mechanics unusual in the
+                adventure game genre to affect the player's interaction with and perception of the story.
+                Delivered at <a href="http://www.screen7.co.uk/adventurex/">AdventureX 2013</a>, 07/12/2013.
+            </li>
+        </ul>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Contact Information</h2>
+        <ul>
+            <li>Tom Kitchin</li>
+            <li>Email: tkitchin AT gmail DOT com</li>
+            <li>Twitter: <a href="http://twitter.com/TwoDaemon">@TwoDaemon</a></li>
+        </ul>
+    </section>
+
 {% endblock %}

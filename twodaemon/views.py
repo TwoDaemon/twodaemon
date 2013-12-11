@@ -8,7 +8,8 @@ from twodaemon import article
 @app.route("/")
 @cache.cached(timeout=app.config['CACHE_TIMEOUT'])
 def home():
-    return render_template('home.html', title="Home")
+    articles = article.list()
+    return render_template('home.html', title="Home", articles=articles)
 
 @app.route("/about")
 @cache.cached(timeout=app.config['CACHE_TIMEOUT'])

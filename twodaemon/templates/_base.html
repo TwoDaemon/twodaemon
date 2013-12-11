@@ -23,12 +23,6 @@
     <h1 class="site-title"><a href="{{ url_for('home') }}">twodaemon.co.uk</a></h1>
         <nav class="container">
             {% block navigation %}
-            {% from '_macros.html' import nav %}
-            <ul>
-                <li>{{ nav('Home', 'home') }}</li>
-                <li>{{ nav('About', 'about') }}</li>
-                <li>{{ nav('Articles', 'article_list') }}</li>
-            </ul>
             {% endblock %}
         </nav>
         <section class="container">
@@ -46,8 +40,8 @@
             {% block footer %}
             <ul>
                 <li>Copyright Tom Kitchin</li>
-                <li>Twitter: <a href="http://twitter.com/TwoDaemon">@TwoDaemon</a></li>
                 <li>Email: tkitchin AT gmail DOT com</li>
+                <li>Twitter: <a href="http://twitter.com/TwoDaemon">@TwoDaemon</a></li>
             </ul>
             {% endblock %}
         </footer>

@@ -46,6 +46,7 @@ def _create_article(content, md, name):
         'content': Markup(content),
         'url': url_for('article_single', article_name=name),
         'absolute_url': url_for('article_single', article_name=name, _external=True),
+        'toc': Markup(md.toc),
     })
     return article
 

@@ -6,6 +6,10 @@
     {% endif %}
 {%- endmacro %}
 
+{% macro localnav(name, id) -%}
+    <a href="#{{ id }}">{{ name }}</a>
+{%- endmacro %}
+
 {% macro js_import(js_name) -%}
     <script type="text/javascript" src="{{ url_for('static', filename='js/' + js_name + '.js') }}"></script>
 {%- endmacro %}
