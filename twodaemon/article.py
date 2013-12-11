@@ -1,113 +1,54 @@
 """Flask article loading module.  """
 
 from os import listdir
-from os.path import isdir
+from cStringIO import StringIO
 
-from flask import Markup
-from flask import url_for
-from markdown import markdown
-import yaml
+from flask import Markup, url_for
+from markdown import Markdown
 
 from twodaemon import app
 
+article_directory = "%s/content/articles" % app.root_path
 
-def article_list(article_type):
+def list():
     """Collect data for all existing articles.  """
-    type_path = "%s/%s" % (Article.prefix_directory, article_type)
     articles = []
-    for article_name in listdir(type_path):
-        article = Article(article_type, article_name)
-        article.initialise()
-        if not article.config.get('hidden'):
-            articles.append(article.build_article_meta())
+    for article_file in listdir(article_directory):
+        article_name = article_file[:-3]
+        article = load(article_name)
+        if 'hidden' not in article:
+            articles.append(article)
     return articles
 
+def load(article_name):
+    """Load an article for page display.  """
+    content, md = _load_md("%s/%s.md" % (article_directory, article_name))
+    return _create_article(content, md, article_name)
 
-class Article(object):
-    """Load page content for multi-page articles."""
+def _load_md(filepath):
+    """Load a markdown file.  """
+    md = Markdown(extensions = app.config['MARKDOWN_EXTENSIONS'])
+    contentIO = StringIO()
+    try:
+        with open(filepath, 'r') as f:
+            md.convertFile(input=f, output=contentIO)
+    except IOError as ioe:
+        raise ArticleNotFoundError("Article file '%s' not found." % filepath)
+    content = contentIO.getvalue()
+    contentIO.close()
+    return content, md
 
-    prefix_directory = "%s/content" % app.root_path
+def _create_article(content, md, name):
+    """Create an article dict from required information.  """
+    article = {key: meta[0] for key, meta in md.Meta.iteritems()}
+    article.update({
+        'name': name,
+        'content': Markup(content),
+        'url': url_for('article_single', article_name=name),
+        'absolute_url': url_for('article_single', article_name=name, _external=True),
+    })
+    return article
 
-    def __init__(self, article_type, article_name):
-        self.type = article_type
-        self.name = article_name
-        self.config = None
-
-    def initialise(self):
-        self._check_article_directory()
-        self._load_config()
-
-    def build_article_meta(self):
-        return {
-            "article_name": self.name,
-            "article_type": self.type,
-            "article_url": url_for('article_single', article_name=self.name),
-            "article_absolute_url": url_for('article_single', article_name=self.name, _external=True),
-            "article_title": self.config['title'],
-            "article_subtitle": self.config.get('subtitle'),
-            "page_count": len(self.config['pages']),
-        }
-
-    def build_page(self, page_number):
-        page_config = self._get_page_config(page_number)
-        page = self.build_article_meta()
-        page.update({
-            "page_title": page_config['title'],
-            "page_url": url_for('article_single', article_name=self.name, page_number=page_number),
-            "page_number": page_number,
-            "page_content": self._load_page_content(page_config),
-        })
-        # Add previous and next pages.
-        if page_number > 1:
-            page['prev_page_url'] = url_for('article_single', article_name=self.name, page_number=page_number - 1)
-        if page_number < page['page_count']:
-            page['next_page_url'] = url_for('article_single', article_name=self.name, page_number=page_number + 1)
-
-        return page
-
-    def _check_article_directory(self):
-        self.location = "%s/%s/%s" % (Article.prefix_directory, self.type, self.name)
-        if not isdir(self.location):
-            raise ArticleNotFoundError("Directory for article '%s' of type '%s' at %s not found." % (self.name, self.type, self.location))
-
-    def _load_config(self):
-        try:
-            with open("%s/meta.yaml" % self.location, 'r') as f:
-                self.config = yaml.load(f)
-        except IOError:
-            raise ArticleConfigNotFoundError("Config file for article '%s' of type %s' not found." % (self.name, self.type))
-        except yaml.YAMLError as ye:
-            raise ArticleConfigLoadError("Error reading config YAML: %s" % ye.message)
-
-    def _get_page_config(self, page_number):
-        try:
-            return self.config['pages'][page_number]
-        except KeyError as ke:
-            raise ArticlePageNotFoundError("Definition for page %i not found in config for %s: %s" % (page_number, self.type, self.name))
-
-    def _load_page_content(self, page_data):
-        file_content = self._load_page_file_content(page_data['file'])
-        return Markup(markdown(file_content))
-
-    def _load_page_file_content(self, page_file):
-        try:
-            with open("%s/%s" % (self.location, page_file), 'r') as f:
-                return f.read()
-        except IOError as ioe:
-            raise ArticlePageNotFoundError("Article file '%s' of type '%s' not found." % (page_file, self.type))
-
-
-class ArticleLoadError(Exception):
-    """Exception thrown when there are errors in loading the article.  """
-
-class ArticleConfigLoadError(ArticleLoadError):
-    """Exception thrown when there are errors loading an article config file.  """
 
 class ArticleNotFoundError(Exception):
     """Exception thrown when the given article cannot be found.  """
-
-class ArticleConfigNotFoundError(ArticleNotFoundError):
-    """Exception thrown when an article config file cannot be found.  """
-
-class ArticlePageNotFoundError(ArticleNotFoundError):
-    """Exception thrown when an article page cannot be found.  """

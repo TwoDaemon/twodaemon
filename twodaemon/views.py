@@ -1,6 +1,6 @@
 """View handler. """
 
-from flask import render_template, abort
+from flask import render_template, abort, redirect, url_for
 
 from twodaemon import app, cache
 from twodaemon import article
@@ -18,20 +18,22 @@ def about():
 @app.route("/articles/")
 @cache.cached(timeout=app.config['CACHE_TIMEOUT'])
 def article_list():
-    articles = article.article_list("article")
+    articles = article.list()
     return render_template('articles_list.html', title="Articles", article_list=articles)
 
 @app.route("/articles/<article_name>")
-@app.route("/articles/<article_name>/<int:page_number>")
 @cache.cached(timeout=app.config['CACHE_TIMEOUT'])
-def article_single(article_name, page_number=1):
-    article_ = article.Article("article", article_name)
+def article_single(article_name):
     try:
-        article_.initialise()
-        page = article_.build_page(page_number)
+        article_ = article.load(article_name)
     except article.ArticleNotFoundError:
         abort(404)
-    return render_template('article.html', title=page['page_title'], **page)
+    return render_template('article.html', title=article_['title'], article=article_)
+
+@app.route("/articles/<article_name>/<int:page_number>")
+def article_paged_redirect(article_name, page_number):
+    """We don't use page numbers anymore, so 301 redirect just in case. """
+    return redirect(url_for('article_single', article_name=article_name), 301)
 
 @app.errorhandler(404)
 def page_not_found(error):

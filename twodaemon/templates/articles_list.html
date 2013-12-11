@@ -6,8 +6,8 @@
     probably be a few less focused entries eventually in lieu of having a blog to put them on.</p>
     <ul class="article-list">
     {% for article in article_list %}
-    <li><a href="{{ article.article_url }}">{{ article.article_title }}</a>
-        {%- if article.article_subtitle %} - {{ article.article_subtitle }}{% endif %}</li>
+    <li><a href="{{ article.url }}">{{ article.title }}</a>
+        {%- if article.subtitle %} - {{ article.subtitle }}{% endif %}</li>
     {% endfor %}
     </ul>
 {% endblock %}
