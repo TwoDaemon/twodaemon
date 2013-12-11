@@ -1,3 +1,7 @@
+title: Challenge vs. Difficulty
+subtitle: Defining the difference between challenge and difficulty in games.
+hidden: true
+
 *Dark Souls* is not a hard game.
 
 Well, that was a lie. It's basically goddamn nails. I should say: *Dark Souls* is not *only* a hard game.
