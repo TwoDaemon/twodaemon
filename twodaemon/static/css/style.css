@@ -191,7 +191,8 @@ body {
   background-color: #394049;
   line-height: 1.5em;
   font-size: 0.9em;
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Open Sans', sans-serif;
+  max-width: 50em; }
 
 h1 {
   font-size: 2em; }
@@ -277,11 +278,6 @@ article {
     color: #968b83;
     padding: 0.5em;
     margin-bottom: 0.5em; }
-
-.article-nav .left, .article-nav .right {
-  display: inline-block; }
-.article-nav .right {
-  float: right; }
 
 .comments {
   border-top-width: 1px;
