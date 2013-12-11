@@ -11,11 +11,6 @@ def home():
     articles = article.list()
     return render_template('home.html', title="Home", articles=articles)
 
-@app.route("/about")
-@cache.cached(timeout=app.config['CACHE_TIMEOUT'])
-def about():
-    return render_template('about.html', title="About")
-
 @app.route("/articles/")
 @cache.cached(timeout=app.config['CACHE_TIMEOUT'])
 def article_list():
@@ -31,11 +26,21 @@ def article_single(article_name):
         abort(404)
     return render_template('article.html', title=article_['title'], article=article_)
 
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('404.html', title="404 Not Found"), 404
+
+##
+# Some 301 permanent redirects after the site change.
+##
+
+@app.route("/about")
+def about():
+    """We don't use the about page anymore, it's part of the home page."""
+    return redirect(url_for('home'), 301)
+
 @app.route("/articles/<article_name>/<int:page_number>")
 def article_paged_redirect(article_name, page_number):
     """We don't use page numbers anymore, so 301 redirect just in case. """
     return redirect(url_for('article_single', article_name=article_name), 301)
 
-@app.errorhandler(404)
-def page_not_found(error):
-    return render_template('404.html', title="404 Not Found"), 404
