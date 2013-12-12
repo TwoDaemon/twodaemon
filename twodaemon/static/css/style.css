@@ -192,7 +192,9 @@ body {
   line-height: 1.5em;
   font-size: 0.9em;
   font-family: 'Open Sans', sans-serif;
-  max-width: 50em; }
+  max-width: 50em;
+  margin: 0 auto;
+  padding: 0 1em; }
 
 h1 {
   font-size: 2em; }
@@ -219,11 +221,11 @@ em {
   text-decoration: italic; }
 
 li {
-  padding-bottom: 0.2em; }
+  padding-bottom: 0.5em; }
 
 /* Navigation */
 nav {
-  padding: 1em;
+  padding: 1em 0;
   border-bottom-width: 1px;
   border-bottom-color: #464c56;
   border-bottom-style: solid;
@@ -241,7 +243,6 @@ h1, h2, h3, h4 {
   font-family: 'Nixie One', cursive; }
 
 h1 {
-  padding-left: 0.5em;
   padding-top: 1em;
   padding-bottom: 1em; }
   h1 a {
@@ -266,7 +267,6 @@ h4 {
   color: #968b83; }
 
 article {
-  padding-left: 1em;
   border-bottom-width: 1px;
   border-bottom-color: #464c56;
   border-bottom-style: solid; }
@@ -294,7 +294,7 @@ article {
 
 /* Footer */
 footer {
-  padding: 1em;
+  padding: 1em 0;
   border-bottom-width: 1px;
   border-bottom-color: #464c56;
   border-bottom-style: solid;

@@ -1,9 +1,9 @@
 {% macro nav(name, endpoint, id='') -%}
-    {% if endpoint == request.endpoint %}
+    {% if endpoint == request.endpoint -%}
         <a href="#{{ id }}" class="scroll">{{ name }}</a>
-    {% else %}
+    {%- else -%}
         <a href="{{ url_for(endpoint, _anchor=id) }}">{{ name }}</a>
-    {% endif %}
+    {%- endif %}
 {%- endmacro %}
 
 {% macro js_import(js_name) -%}

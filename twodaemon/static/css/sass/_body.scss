@@ -6,7 +6,6 @@ h1, h2, h3, h4 {
 
 h1 {
     padding: {
-        left: 0.5em;
         top: 1em;
         bottom: 1em;
     }
@@ -42,8 +41,6 @@ h4 {
 }
 
 article {
-    padding-left: 1em;
-
     border-bottom: {
         width: 1px;
         color: $background-highlight-colour;
