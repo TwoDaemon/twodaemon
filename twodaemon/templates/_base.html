@@ -40,15 +40,15 @@
                 {% block content %}
                 {% endblock %}
             </article>
+        {% block footer %}
         <footer>
-            {% block footer %}
             <ul>
                 <li>Copyright Tom Kitchin</li>
                 <li>Email: <a href="mailto:tkitchin@gmail.com">tkitchin@gmail.com</a></li>
                 <li>Twitter: <a href="http://twitter.com/TwoDaemon">@TwoDaemon</a></li>
             </ul>
-            {% endblock %}
         </footer>
+        {% endblock %}
         {% block js_bottom %}
             {% from '_macros.html' import js_import %}
             {{ js_import('smooth-scroll') }}
