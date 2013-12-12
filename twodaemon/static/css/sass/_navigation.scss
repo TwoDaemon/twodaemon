@@ -9,18 +9,24 @@ nav {
         style: solid;
     }
 
-    color: $background-highlight-colour;
-
     li {
         display: inline-block;
-
-        .active {
-            font-weight: bold;
-        }
+        border-right: 1px solid $background-highlight-colour;
+        padding: 0 1em;
     }
 
-    li + li:before {
-        content: " | ";
-        padding: 0 1em;
+    li:last-of-type {
+        border: 0;
+    }
+
+    /* Fix the nav menu in small screens. */
+    @media screen and (max-width: 458px) {
+        li {
+            display: block;
+        }
+
+        li {
+            border: 0;
+        }
     }
 }

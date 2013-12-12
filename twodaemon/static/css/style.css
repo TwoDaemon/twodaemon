@@ -229,14 +229,18 @@ nav {
   border-bottom-width: 1px;
   border-bottom-color: #464c56;
   border-bottom-style: solid;
-  color: #464c56; }
+  /* Fix the nav menu in small screens. */ }
   nav li {
-    display: inline-block; }
-    nav li .active {
-      font-weight: bold; }
-  nav li + li:before {
-    content: " | ";
+    display: inline-block;
+    border-right: 1px solid #464c56;
     padding: 0 1em; }
+  nav li:last-of-type {
+    border: 0; }
+  @media screen and (max-width: 458px) {
+    nav li {
+      display: block; }
+    nav li {
+      border: 0; } }
 
 /* Main content */
 h1, h2, h3, h4 {
