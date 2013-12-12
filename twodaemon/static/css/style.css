@@ -237,10 +237,14 @@ nav {
   nav li:last-of-type {
     border: 0; }
   @media screen and (max-width: 458px) {
-    nav li {
-      display: block; }
-    nav li {
-      border: 0; } }
+    nav {
+      padding: 0;
+      margin-bottom: 1em; }
+      nav li {
+        display: block;
+        border-right: 0;
+        border-bottom: 1px solid #464c56;
+        padding: 10px; } }
 
 /* Main content */
 h1, h2, h3, h4 {
