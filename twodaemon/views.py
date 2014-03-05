@@ -26,6 +26,11 @@ def article_single(article_name):
         abort(404)
     return render_template('article.html', title=article_['title'], article=article_)
 
+@app.route("/game-a-week")
+@cache.cached(timeout=app.config['CACHE_TIMEOUT'])
+def game_a_week():
+    return render_template('game_a_week.html', title="Game A Week")
+
 @app.errorhandler(404)
 def page_not_found(error):
     return render_template('404.html', title="404 Not Found"), 404
