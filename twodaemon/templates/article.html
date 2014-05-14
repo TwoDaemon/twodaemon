@@ -3,9 +3,10 @@
 {% block content %}
     {% if article.subtitle %}<div class="subtitle">{{ article.subtitle }}</div>{% endif %}
     {{ article.content }}
-    <div class="comments" id="disqus_thread"></div>
+    {# <div class="comments" id="disqus_thread"></div> #}
 {% endblock %}
 
+{#
 {% block js_bottom %}
 {{ super() }}
 {% from '_macros.html' import js_import %}
@@ -17,3 +18,4 @@
 </script>
 {{ js_import('disqus') }}
 {% endblock %}
+#}
