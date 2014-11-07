@@ -15,7 +15,7 @@ def home():
 @cache.cached(timeout=app.config['CACHE_TIMEOUT'])
 def article_list():
     articles = article.list()
-    return render_template('articles_list.html', title="Articles", article_list=articles)
+    return render_template('articles_list.html', title="Writing", article_list=articles)
 
 @app.route("/articles/<article_name>")
 @cache.cached(timeout=app.config['CACHE_TIMEOUT'])
