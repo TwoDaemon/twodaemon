@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>{% block head_title %}{{ title }} | twodaemon.co.uk{% endblock %}</title>
+        <title>{% block head_title %}{{ title }} | tkitchin.co.uk{% endblock %}</title>
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         {% block google_analytics %}
@@ -20,7 +20,7 @@
         {% endblock %}
     </head>
     <body>
-    <h1><a href="{{ url_for('home') }}">twodaemon.co.uk</a></h1>
+    <h1><a href="{{ url_for('home') }}">tkitchin.co.uk</a></h1>
         {% block navigation %}
             <nav>
                 {% from '_macros.html' import nav %}
