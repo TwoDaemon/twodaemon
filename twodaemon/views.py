@@ -11,6 +11,11 @@ def home():
     articles = article.list()
     return render_template('home.html', title="Home", articles=articles)
 
+@app.route("/cv")
+@cache.cached(timeout=app.config['CACHE_TIMEOUT'])
+def cv():
+    return render_template('cv.html', title="CV")
+
 @app.route("/articles/")
 @cache.cached(timeout=app.config['CACHE_TIMEOUT'])
 def article_list():
